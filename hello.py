@@ -3,8 +3,8 @@
 import sys
 
 print "Enter the word that you want displayed."
-word = raw_input()
-number = input('Enter the number of times that you want the word displayed.')
+word = raw_input() #This defines the input as the variable called word
+number = input('Enter the number of times that you want the word displayed.') #This will be the number of times that the word is displayed.
 
 count = 0
 while (count < number):
