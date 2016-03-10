@@ -17,3 +17,13 @@ f = open("test.txt", "w");
 print f
 f.write("%r" % (word))
 
+# Here is Adam's code:
+f = open('blah','w')
+
+f.write('Hello kitty\n')
+
+f.close()
+
+
+print 'Bam bam' + str(5) + ' bam bam' + str(4.5) + '\n'
+
