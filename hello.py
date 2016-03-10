@@ -8,7 +8,13 @@
 
 print "Enter the word that you want displayed."
 word = raw_input()
-number = input('Enter the number of times that you want the word displayed.') # The user must enter the number, not the number written as a word (e.g. five won't work)
+
+while True:
+   try:
+      number = input('Enter the number of times that you want the word displayed.') # The user must enter the number, not the number written as a word (e.g. five won't work)
+      break
+   except NameError:
+      print "Oops!  That was not a valid number.  Try again..."
 
 print "This information will be displayed in the test.txt file."
 
@@ -43,3 +49,5 @@ try
 
 except"""
     
+    
+
