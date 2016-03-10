@@ -13,6 +13,6 @@ print "This information will be displayed in the test.txt file."
 f = open("test.txt", "w");
 
 for x in range(0, number):
-    f.write("word" + '\n')
+    f.write("word" + '\n') #Something is wrong right here.
     
     f.close()
