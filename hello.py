@@ -15,4 +15,4 @@ f = open("test.txt", "w");
 for x in range(0, number):
     f.write("word" + '\n') #Something is wrong right here.
     
-    f.close()
+f.close()
