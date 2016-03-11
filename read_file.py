@@ -28,8 +28,12 @@ f.close() # This closes the test.txt file.  Note that it is not indented, becaus
 
 print "What file do you want to open?  Please enter the name of the file with the file-type extension, ex. read_me.txt."
 file_name = raw_input()
-print "Name of the file: ", f
+print "Name of the file: ", file_name
 f = open(file_name, "r");
 
-print(f.read())
-print(f.readline(1))
+for line in f.read().split('\n'):
+   print line
+f.close()
+
+with open(file_name) as f:
+   print "Your file has %d lines." % (sum(1 for _ in f))
