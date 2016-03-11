@@ -50,3 +50,6 @@ print "The last element of your file is"
 # I need to figure this out
 
 f.close()
+
+
+# Look up enumerate and append.
