@@ -31,9 +31,22 @@ file_name = raw_input()
 print "Name of the file: ", file_name
 f = open(file_name, "r");
 
+print "Here are the contents of your file."
 for line in f.read().split('\n'):
    print line
-f.close()
 
 with open(file_name) as f:
    print "Your file has %d lines." % (sum(1 for _ in f))
+    
+print "The first element of your file is"
+# I need to figure this out
+file_as_list = list(f.read())
+print "Here is file_as_list %d" % (file_as_list)
+
+#first_element = file_as_list(0)
+#print "%d" % (first_element)
+
+print "The last element of your file is"
+# I need to figure this out
+
+f.close()
