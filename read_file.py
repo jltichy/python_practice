@@ -18,6 +18,8 @@ print "This information will be displayed in the test.txt file."
 
 f = open("test.txt", "w"); # This opens a file called "test.txt" and will write to it (w).
 
+f.write("This is the first line of the document." + '\n')
+
 for x in range(0, number): # This tells the for loop how many times to run (up to the user-entered number)
     f.write(word + '\n') # The \n at the end starts a new line every time the word is printed in the document.
 f.close() # This closes the test.txt file.  Note that it is not indented, because you don't want to close the file every time a word is printed in the document.
@@ -26,3 +28,8 @@ f.close() # This closes the test.txt file.  Note that it is not indented, becaus
 
 print "What file do you want to open?  Please enter the name of the file with the file-type extension, ex. read_me.txt."
 file_name = raw_input()
+print "Name of the file: ", f
+f = open(file_name, "r");
+
+print(f.read())
+print(f.readline(1))
