@@ -47,7 +47,7 @@ print "%r" % (first_element)
 
 list_length = len(file_as_list)
 
-print "The last element of your file is"
+print "The last element of your file is:"
 last_element = file_as_list[list_length-1]
 print "%r" % (last_element)
 
