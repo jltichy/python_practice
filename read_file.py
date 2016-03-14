@@ -38,18 +38,17 @@ for line in f.read().split('\n'):
 with open(file_name) as f:
    print "Your file has %d lines." % (sum(1 for _ in f))
     
-print "The first element of your file is"
-# I need to figure this out
-file_as_list = list(f.read())
-print "Here is file_as_list %d" % (file_as_list)
+file_as_list = [line.strip() for line in open(file_name, 'r')]
+print "Here is your file written as a list %s" % (file_as_list)
 
-#first_element = file_as_list(0)
-#print "%d" % (first_element)
+print "The first element of your file is"
+first_element = file_as_list(0)
+print "%r" % (first_element)
+
+list_length = len(file_as_list)
 
 print "The last element of your file is"
-# I need to figure this out
+last_element = file_as_list(0)
+print "%s" % (last_element)
 
 f.close()
-
-
-# Look up enumerate and append.
