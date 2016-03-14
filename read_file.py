@@ -41,14 +41,14 @@ with open(file_name) as f:
 file_as_list = [line.strip() for line in open(file_name, 'r')]
 print "Here is your file written as a list %s" % (file_as_list)
 
-print "The first element of your file is"
-first_element = file_as_list(0)
+print "The first element of your file is:"
+first_element = file_as_list[0]
 print "%r" % (first_element)
 
 list_length = len(file_as_list)
 
 print "The last element of your file is"
-last_element = file_as_list(0)
-print "%s" % (last_element)
+last_element = file_as_list[list_length-1]
+print "%r" % (last_element)
 
 f.close()
