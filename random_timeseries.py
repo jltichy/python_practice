@@ -13,11 +13,11 @@ print matrix # allows us to see what's in the matrix (all zeros at this point)
 matrix = np.random.randint(0, 10, (1000, 1)) # fills the matrix of zeros with random integers from 0 to 10.  The size of the matrix doesn't change.
 print matrix # allows us to see what's in the matrix of random values
 
-time = np.arange(1,1001) # creates an array of values from 1 to 1000.  This will be the timeseries (x-axis).
+time = np.arange(1,1001)
 print time
 
-x = time
-y = matrix
+# x = time
+# y = matrix
 
-plt.scatter(x, y)
+plt.scatter(time, matrix)
 plt.show()
