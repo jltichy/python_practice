@@ -2,7 +2,7 @@
 
 # Instructions - Create an array of 1000 randomly distributed numbers.  Plot these as a timeseries from 1 to 1000.  Use numpy and matlibplot.
 
-# This is how to install Matlibplot - sudo apt-get install python-matplotlib
+# This is how to install Matlibplot - sudo easy_install matplotlib # do this for every new workspace
 
 import numpy as np # np is the name of the matrix to be created
 import random
@@ -24,7 +24,7 @@ time = np.arange(1,1001)
 # x = time
 # y = matrix
 
-plt.scatter(time, matrix, color='red')
+plt.scatter(time, matrix, color='purple', marker="<")
 plt.suptitle('Test Title')
 plt.xlabel('xlabel')
 plt.ylabel('ylabel')
