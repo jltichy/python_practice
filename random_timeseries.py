@@ -24,7 +24,7 @@ time = np.arange(1,1001)
 # x = time
 # y = matrix
 
-plt.scatter(time, matrix)
+plt.scatter(time, matrix, color='red')
 plt.suptitle('Test Title')
 plt.xlabel('xlabel')
 plt.ylabel('ylabel')
