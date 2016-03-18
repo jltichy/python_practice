@@ -22,6 +22,7 @@ print 'Here is our function at 1: ' + str(func(1.))
 # Let's try it with another value:
 # The value of our function at 5
 print 'Here is our function at 5: ' + str(func(5))
+#five squared minus one should be 24. Note that I did not include a decimal after the 5 and the answer was still correct.
 
 # Inverse problem: given y find x such that func(x)=y
 # We want to solve for where our function = 0
@@ -35,17 +36,22 @@ print 'Here is the solution to our inverse problem: ' + str(blah)
 #Here is the solution to our inverse problem: [-1.]  
 
 # Let's try to start with a guess of 4 instead of -4
-blah = fmin(func,-4., xtol=10**-9, ftol=10**-9)
+blah = fmin(func,4., xtol=10**-9, ftol=10**-9)
 print 'Here is the solution to our inverse problem: ' + str(blah)
 #Optimization terminated successfully.                                                                                                                   
 #        Current function value: 0.000000                                                                                                               
 #        Iterations: 36                                                                                                                                 
 #        Function evaluations: 73                                                                                                                       
-#Here is the solution to our inverse problem: [-1.] 
+#Here is the solution to our inverse problem: [1.] 
+
+# Since we got -1 when we tried -4 and we got 1 when we tried 4, and we want 0, let's try to start with 0.
+blah = fmin(func,0, xtol=10**-9, ftol=10**-9)
+print 'Here is the solution to our inverse problem: ' + str(blah)
+# The solution to this is also 1.  This method won't work.  I can't guess and check every number...hmmmmm....How to figure this out??
 
 # Tasks
 # 1: Read about fmin and def and functions - done. see comments above
-# 2: What happens when you start with a guess of 4 and not -4? done. see results above.  You get the same answer because of the absolute value command.
+# 2: What happens when you start with a guess of 4 and not -4? done. see results above.  You get 1 instead of -1.
 # 3: Write a function that takes a list and computes the sum of the squares 
 # 	e.g. x(1)**2 + x(2)**2 + ... + x(n)**2
 # 4: Use a list of two elements and find the minimum of the function in 3
