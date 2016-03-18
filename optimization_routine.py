@@ -54,9 +54,12 @@ import numpy as np  # Remember to install numpy as: sudo easy_install numpy
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt  # Remember to install matplotlib as: sudo easy_install matplotlib
-x = np.arange(-10,10)  
+x = np.arange(-10,11)  
 y = eval('func(x)')
-plt.plot(x, y)  
+plt.plot(x, y) 
+plt.suptitle('X squared minus 1') # Figure out how to write an x with a squared symbol.
+plt.xlabel('xlabel')
+plt.ylabel('ylabel')
 plt.savefig('X squared minus 1')
 
 # Tasks
@@ -65,4 +68,3 @@ plt.savefig('X squared minus 1')
 # 3: Write a function that takes a list and computes the sum of the squares 
 # 	e.g. x(1)**2 + x(2)**2 + ... + x(n)**2
 # 4: Use a list of two elements and find the minimum of the function in 3
-
