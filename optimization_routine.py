@@ -49,9 +49,20 @@ blah = fmin(func,0, xtol=10**-9, ftol=10**-9)
 print 'Here is the solution to our inverse problem: ' + str(blah)
 # The solution to this is also 1.  This method won't work.  I can't guess and check every number...hmmmmm....How to figure this out??
 
+# Let's try to plot the function to find where it's equal to 0.
+import numpy as np  # Remember to install numpy as: sudo easy_install numpy
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt  # Remember to install matplotlib as: sudo easy_install matplotlib
+x = np.arange(-10,10)  
+y = eval('func(x)')
+plt.plot(x, y)  
+plt.savefig('X squared minus 1')
+
 # Tasks
 # 1: Read about fmin and def and functions - done. see comments above
 # 2: What happens when you start with a guess of 4 and not -4? done. see results above.  You get 1 instead of -1.
 # 3: Write a function that takes a list and computes the sum of the squares 
 # 	e.g. x(1)**2 + x(2)**2 + ... + x(n)**2
 # 4: Use a list of two elements and find the minimum of the function in 3
+
