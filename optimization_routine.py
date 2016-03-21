@@ -44,12 +44,7 @@ print 'Here is the solution to our inverse problem: ' + str(blah)
 #        Function evaluations: 73                                                                                                                       
 #Here is the solution to our inverse problem: [1.] 
 
-# Since we got -1 when we tried -4 and we got 1 when we tried 4, and we want 0, let's try to start with 0.
-blah = fmin(func,0, xtol=10**-9, ftol=10**-9)
-print 'Here is the solution to our inverse problem: ' + str(blah)
-# The solution to this is also 1.  This method won't work.  I can't guess and check every number...hmmmmm....How to figure this out??
-
-# Let's try to plot the function to find where it's equal to 0.
+# We can also plot the function to find where it's equal to 0.
 import numpy as np  # Remember to install numpy as: sudo easy_install numpy
 import matplotlib
 matplotlib.use('Agg')
@@ -61,6 +56,17 @@ plt.suptitle('X squared minus 1') # Figure out how to write an x with a squared 
 plt.xlabel('xlabel')
 plt.ylabel('ylabel')
 plt.savefig('X squared minus 1')
+
+# Here we go starting with Task number 3.
+
+# For the sake of this exercise, we must first create a list that can be imported into the function.
+L = [1, 2, 3, 4, 5]
+
+print "This function will compute the sum of the squares.  Please enter the name of your list for use with this function."
+list = raw_input() # In this case, the user must enter "L" since that is the name of our list for this exercise.
+def func(y):
+    for item in list:
+return (item**2) 
 
 # Tasks
 # 1: Read about fmin and def and functions - done. see comments above
