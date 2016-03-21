@@ -60,13 +60,21 @@ plt.savefig('X squared minus 1')
 # Here we go starting with Task number 3.
 
 # For the sake of this exercise, we must first create a list that can be imported into the function.
-L = [1, 2, 3, 4, 5]
+L = range(10)
 
+# something is wrong here - check this - i'm not getting the whole list to import.  it's just the name of the variable.
 print "This function will compute the sum of the squares.  Please enter the name of your list for use with this function."
-list = raw_input() # In this case, the user must enter "L" since that is the name of our list for this exercise.
-def func(y):
-    for item in list:
-return (item**2) 
+l = raw_input() # In this case, the user must enter "L" since that is the name of our list for this exercise.
+print l
+
+# i need to use a function to do something to each part of the list.  this is a start.
+# http://stackoverflow.com/questions/13773188/in-python-is-there-a-way-to-call-a-method-on-every-item-of-an-iterable
+def do_all(iterable, func):
+    for i in iter(iterable):
+       func(i)
+
+#def func(y):
+#   for item in list:
 
 # Tasks
 # 1: Read about fmin and def and functions - done. see comments above
