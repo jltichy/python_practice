@@ -70,11 +70,11 @@ def square(list): #This defines the function called "square."  It takes in somet
 print 'Here is the sum of the squares of each item in your list: ' + str(square(list))
 
 # Task number 4.
-matrix = np.zeros((1, 2)) # this creates a matrix of zeros with 1 column and 2 rows
-matrix = np.random.randint(0, 100, (1, 2))
-print matrix
-answer = fmin(square,matrix, xtol=10**-9, ftol=10**-9)
-print 'Here is the solution to our inverse problem: ' + str(answer)
+#matrix = np.zeros((1, 2)) # this creates a matrix of zeros with 1 column and 2 rows
+#matrix = np.random.randint(0, 100, (1, 2))
+#print matrix
+blah= fmin(square,[1.,2],xtol=10**-9, ftol=10**-9)
+print(blah)
 
 # Tasks
 # 1: Read about fmin and def and functions - done. see comments above
@@ -82,6 +82,8 @@ print 'Here is the solution to our inverse problem: ' + str(answer)
 # 3: Write a function that takes a list and computes the sum of the squares 
 # 	e.g. x(1)**2 + x(2)**2 + ... + x(n)**2
 # 4: Use a list of two elements and find the minimum of the function in 3
+
+
 
 
 
