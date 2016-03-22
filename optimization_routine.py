@@ -73,8 +73,8 @@ print 'Here is the sum of the squares of each item in your list: ' + str(square(
 #matrix = np.zeros((1, 2)) # this creates a matrix of zeros with 1 column and 2 rows
 #matrix = np.random.randint(0, 100, (1, 2))
 #print matrix
-blah= fmin(square,[1.,2],xtol=10**-9, ftol=10**-9)
-print(blah)
+blah= fmin(square,[1.,2],xtol=10**-9, ftol=10**-9) #This takes the square function and finds the minimum of the function.  Our guesses are 1 and 2, even though we know this function will be at its minimum when the elements inside the list are zero.
+print(blah) #The answer given here produces [  3.12149264e-10  -3.24195370e-11], meaning these are awfully close to zero, as expected.  
 
 # Tasks
 # 1: Read about fmin and def and functions - done. see comments above

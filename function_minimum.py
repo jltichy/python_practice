@@ -1,22 +1,28 @@
 #!/usr/bin/env python
 
+# Enter these two commands if start a new workspace:
+#sudo easy_install numpy
+#sudo easy_install matplotlib
+
 from scipy.optimize import fmin
 import numpy as np
 import math
-import matplotlib.pyplot as plt
 import sys
+import matplotlib
+matplotlib.use('Agg') #This is required to run matplotlib on Google Chrome.
+import matplotlib.pyplot as plt
 
-# Make a vector of numbers from 0 to 10
+# Make a vector of numbers from 0 to 1000
 t = np.asarray(range(0,100000))/100.
 
 # We can make some data with noise in it
 a = 2.
 b = 4.
 data = a + (b*t) + .5*np.random.rand(100000)
+print data
 
 
-
-# Now suppose we new our data was sinusoidal in nature, but don't know a and b. 
+# Now suppose we knew our data was sinusoidal in nature, but don't know a and b. 
 # Can we solve for a and b?
 
 def  resifunc(params):    
@@ -33,10 +39,9 @@ def  resifunc(params):
 
 
 
-ab = fmin(resifunc,[2., 4.], xtol=10**-3, ftol=10**-19)
+ab = fmin(resifunc,[2., 4.], xtol=10**-3, ftol=10**-19) #How do you know what to set xtol and ftol to be?
 print ' Here are our a and b parameters ' + str(ab)
 
 plt.plot(t,data)
 plt.plot(t, ab[0]+ ab[1]*t)
-
-plt.show()
+plt.savefig('Function Plot')
