@@ -57,18 +57,22 @@ plt.xlabel('xlabel')
 plt.ylabel('ylabel')
 plt.savefig('X squared minus 1')
 
+
+
 # Here we go starting with Task number 3.
 
 # For the sake of this exercise, we must first create a list that can be imported into the function.
 list = range(10)
 print list
-#size = len(list)
-#print size
+#size = len(list) #Not necessary if using numpy, since there is a function that will piece-by-piece square each item.  We don't care how many there are.
+#print size #Again, not necessary.
 
+#This function works, but it only squares each element in the list.  It doesn't add them all together to give one answer.  
 #def square(list):
 #    return np.array([list])**2
 #print square(list)
-    
+
+#Here is where I am trying to add all of the results from squaring each element.
 def square(list):
     np.array([list])**2
     return np.sum([list])
