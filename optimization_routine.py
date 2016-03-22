@@ -57,27 +57,17 @@ plt.xlabel('xlabel')
 plt.ylabel('ylabel')
 plt.savefig('X squared minus 1')
 
-
-
-# Here we go starting with Task number 3.
-
+# Task number 3.
 # For the sake of this exercise, we must first create a list that can be imported into the function.
 list = range(10)
-print list
-#size = len(list) #Not necessary if using numpy, since there is a function that will piece-by-piece square each item.  We don't care how many there are.
-#print size #Again, not necessary.
+#print list #We don't need to see this everytime. 
 
-#This function works, but it only squares each element in the list.  It doesn't add them all together to give one answer.  
-#def square(list):
-#    return np.array([list])**2
-#print square(list)
-
-#Here is where I am trying to add all of the results from squaring each element.
-def square(list):
-    np.array([list])**2
-    return np.sum([list])
-print square(list)
-    
+#Here is the function.
+def square(list): #This defines the function called "square."  It takes in something called "list."  In this case, we defined the list above.
+    A = np.array([list])**2 #Numpy is able to element-wise square items in a list.  We define it to be A, so we can call A in the next line.
+    return np.sum([A])  #This sums up all of the squared values from the previous line.
+#print square(list) #This prints the result.  Let's make it user friendly:
+print 'Here is the sum of the squares of each item in your list: ' + str(square(list))
     
 # Tasks
 # 1: Read about fmin and def and functions - done. see comments above
@@ -85,3 +75,9 @@ print square(list)
 # 3: Write a function that takes a list and computes the sum of the squares 
 # 	e.g. x(1)**2 + x(2)**2 + ... + x(n)**2
 # 4: Use a list of two elements and find the minimum of the function in 3
+
+
+
+
+
+
