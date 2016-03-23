@@ -31,7 +31,7 @@ def  resifunc(params): # This defines a function called resifunc.  It takes in s
     anew = params[0] # anew will be the first element of the list called params (at index space of 0)
     bnew = params[1] # bnew will be the second element of the list called params (at index space of 1)
     # Here is our model function
-    modelfun = anew + (b*t)
+    modelfun = anew + (bnew*t)
     resi = np.sum(abs(data - modelfun)**2)
     return resi
 
