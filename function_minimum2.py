@@ -18,8 +18,11 @@ t = np.asarray(range(0,200))/100. # This has that same oddity -- why do the math
 # We can make some data with noise in it
 a = 2.
 b = 4.
-data = a*np.sin((b*t)*2*math.pi) + .5*np.random.rand(200)
-
+data = a*np.sin((b*t)*2*math.pi) + .5*np.random.rand(200) # The value directly in front of *np.random.rand(200) can be changed to change the data.  It started at .5
+# The smaller the value in front of the np.random part of this equation, the better the data fits the sine wave curve. 
+# If we change the + to a - then the data flips to the opposite side of the sine wave curve.
+# The goal is to minimize the value in front of "*np.random.rand(200)"
+# That would mean that you don't have much noise.
 
 
 # Now suppose we new our data was sinusoidal in nature, but don't know a and b. 
@@ -36,8 +39,6 @@ def  resifunc(params):
 # So we have a function that takes our data and compares it two a sine function for different parameters anew bnew
 
 #Now see what we get with fmin
-
-
 
 ab = fmin(resifunc,[2., 4.], xtol=10**-3, ftol=10**-19)
 print ' Here are our a and b parameters ' + str(ab)
