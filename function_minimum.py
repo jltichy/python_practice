@@ -61,3 +61,8 @@ def myFun2(x):
     return (x[0]-1.2)**2 + (x[1]+3.7)**2
 blah2 = fmin(myFun2,[0,0], xtol=1, ftol=1e-3)
 print blah2
+
+def myFun3(x):
+    return (x[0]-1.2)**2 + (x[1]+3.7)**2
+blah3 = fmin(myFun3,[0,0], xtol = 1e-6, ftol = 1e-6)
+print blah3
