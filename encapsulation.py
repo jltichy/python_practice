@@ -31,13 +31,13 @@ accountObject.balance = 200000000
 and then the value has been changed...
 but if you can make the attributes private, then the account is secure.
 
-However, we can use getters and setters if we still want to make the attributes private but still want to access them in a particular way.However
+However, we can use getters and setters if we still want to make the attributes private but still want to access them in a particular way.
 '''
 
 # Here is an example of getters and setters:
 
 class bankAccount():
-    '''This is a bank account class'''
+    # This is a bank account class
     def __init__(self, account_name = "Current Account", balance = 200):
         self.__account_name = account_name
         self.__balance = balance
@@ -50,7 +50,7 @@ class bankAccount():
             self.__balance = self.__balance - value
             print("New Balance: ", self.__balance)
         else:
-            print("You do not have enough funds!"
+            print("You do not have enough funds!")
             
 accountObject = bankAccount()
 
