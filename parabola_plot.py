@@ -23,6 +23,7 @@ print 'Here is our function at 1: ' + str(func(1.))
 print 'Here is our function at 5: ' + str(func(5))
 #five squared should be 25.
 
+import math # Remember to install math as: sudo easy_install math
 import numpy as np  # Remember to install numpy as: sudo easy_install numpy
 import matplotlib
 matplotlib.use('Agg')
@@ -35,3 +36,16 @@ plt.xlabel('xlabel')
 plt.ylabel('ylabel')
 plt.savefig('X squared')
 
+#Instructions - Making a plot of a sine or cosine function.
+# A function 
+def func2(x2):
+    return (math.sin(x2))
+#def allows you to define a function of your own, in this case a function of x
+
+import matplotlib.pylab as plt
+x = np.linspace(-np.pi, np.pi, 201)
+plt.plot(x, np.sin(x))
+plt.xlabel('Angle [rad]')
+plt.ylabel('sin(x)')
+plt.axis('tight')
+plt.savefig('Sine X')
