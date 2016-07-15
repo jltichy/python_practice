@@ -28,24 +28,35 @@ import numpy as np  # Remember to install numpy as: sudo easy_install numpy
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt  # Remember to install matplotlib as: sudo easy_install matplotlib
+plt.figure(5)
 x = np.arange(-10,11)  
 y = eval('func(x)')
 plt.plot(x, y) 
 plt.suptitle('X squared') # Figure out how to write an x with a squared symbol.
 plt.xlabel('xlabel')
 plt.ylabel('ylabel')
-plt.savefig('X squared')
+plt.savefig('Xsquared')
+plt.clf()
 
-#Instructions - Making a plot of a sine or cosine function.
+#Instructions - Make a plot of a sine or cosine function.
 # A function 
-def func2(x2):
-    return (math.sin(x2))
+#def func2(x2):
+#    return (math.sin(x2))
 #def allows you to define a function of your own, in this case a function of x
 
 import matplotlib.pylab as plt
+plt.figure(1)
 x = np.linspace(-np.pi, np.pi, 201)
 plt.plot(x, np.sin(x))
 plt.xlabel('Angle [rad]')
 plt.ylabel('sin(x)')
 plt.axis('tight')
-plt.savefig('Sine X')
+plt.savefig('SineX')
+
+plt.figure(2)
+x = np.linspace(-np.pi, np.pi, 201)
+plt.plot(x, np.cos(x))
+plt.xlabel('Angle [rad]')
+plt.ylabel('cos(x)')
+plt.axis('tight')
+plt.savefig('CosineX')
