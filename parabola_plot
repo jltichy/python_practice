@@ -7,18 +7,6 @@
 #sudo easy_install numpy
 #sudo easy_install matplotlib
 
-from scipy.optimize import fmin
-import numpy as np
-import math
-import sys
-import matplotlib
-matplotlib.use('Agg') #This is required to run matplotlib on Google Chrome.
-import matplotlib.pyplot as plt
-
-# Make a vector of numbers from 0 to 1000
-x = np.asarray(range(0,100000))/100.
-print x
-
 # A function 
 def func(x):
     return (x**2) 
@@ -34,3 +22,16 @@ print 'Here is our function at 1: ' + str(func(1.))
 # The value of our function at 5
 print 'Here is our function at 5: ' + str(func(5))
 #five squared should be 25.
+
+import numpy as np  # Remember to install numpy as: sudo easy_install numpy
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt  # Remember to install matplotlib as: sudo easy_install matplotlib
+x = np.arange(-10,11)  
+y = eval('func(x)')
+plt.plot(x, y) 
+plt.suptitle('X squared') # Figure out how to write an x with a squared symbol.
+plt.xlabel('xlabel')
+plt.ylabel('ylabel')
+plt.savefig('X squared')
+
