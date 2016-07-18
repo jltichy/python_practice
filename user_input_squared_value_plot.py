@@ -9,13 +9,23 @@ def func(user_input):
     return (user_input**2) 
     
 import numpy as np  # Remember to install numpy as: sudo easy_install numpy
-import matplotlib
+import matplotlib # Remember to install matplotlib as: sudo easy_install matplotlib
 matplotlib.use('Agg')
-import matplotlib.pyplot as plt  # Remember to install matplotlib as: sudo easy_install matplotlib
+import matplotlib.pyplot as plt  
 plt.figure(1)
 x = np.arange(-20,21)  
+print x
 y = eval('func(user_input)')
-plt.plot(x, y) 
+print y
+
+z = np.full((len(x),1), y)
+print z
+
+#a = np.empty(len(x))
+#for i in range(len(x)):
+#    a[i] = y
+
+plt.plot(x, z) 
 plt.suptitle('User Input - X squared') # Figure out how to write an x with a squared symbol.
 plt.xlabel('xlabel')
 plt.ylabel('ylabel')
