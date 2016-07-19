@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
-#Instructions - Write a function that takes a number and squares it.  Then plot that function in a range from -20 to 20.
+#Part A.
+#Instructions - Write a function that takes a number and squares it.  Then plot that function in a range from -20 to 20.  This will plot a straight line from -20 to 20, at what ever value is entered^2.
 
 user_input = input('Please input a number.  This program will square the number and will create a plot of the function from -20 to 20.')
 print(user_input)
@@ -30,3 +31,21 @@ plt.suptitle('User Input - X squared') # Figure out how to write an x with a squ
 plt.xlabel('xlabel')
 plt.ylabel('ylabel')
 plt.savefig('userinputXsquared')
+
+#Part B.
+#Instructions - Plot a parabola from -20 to 20. y = x^2
+
+def func(x):
+    return (x**2) 
+    
+plt.figure(2)
+x = np.arange(-20,21)  
+print x
+y = eval('func(x)')
+print y
+
+plt.plot(x, y) 
+plt.suptitle('Parabola from -20 to 20') # Figure out how to write an x with a squared symbol.
+plt.xlabel('xlabel')
+plt.ylabel('ylabel')
+plt.savefig('negposparabola')
