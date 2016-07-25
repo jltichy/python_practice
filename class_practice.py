@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 class Rocket():
     # Rocket simulates a rocket ship for a game,
     #  or a physics simulation.
