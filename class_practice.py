@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+# use this site: http://introtopython.org/classes.html#Exercises-oop
 class Rocket():
     # Rocket simulates a rocket ship for a game,
     #  or a physics simulation.
