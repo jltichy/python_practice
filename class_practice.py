@@ -17,6 +17,7 @@ class Rocket(object):
         
 # Create a fleet of 5 rockets, and store them in a list.
 my_rockets = [Rocket() for x in range(0,5)]
+print my_rockets
 
 # Move the first rocket up.
 my_rockets[0].move_up()
@@ -61,6 +62,8 @@ matplotlib.use('Agg') #This is required to run matplotlib on Google Chrome.
 import matplotlib.pyplot as plt
 x = [my_rockets[0].x, my_rockets[1].x, my_rockets[2].x, my_rockets[3].x, my_rockets[4].x]
 y = [my_rockets[0].y, my_rockets[1].y, my_rockets[2].y, my_rockets[3].y, my_rockets[4].y]
+print x
+print y
 plt.scatter(x,y)
 plt.suptitle('Rocket Coordinate Locations')
 plt.xlabel('x Coordinate')
