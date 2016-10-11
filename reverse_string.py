@@ -16,7 +16,6 @@ reversed = splitted[::-1]
 print reversed
 result = " ".join(reversed)
 print result
-# result = " ".join(str.split()[::-1])
-# print result
+
 
 
