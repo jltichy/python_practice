@@ -9,17 +9,38 @@
 
 # Hint: use the Python random library for picking a random word.
 
-import numpy as np # np is the name of the matrix to be created
 import random
+from random import randint
 
-fname = open("sowpods.txt", "w"); # This opens a file called "sowpods.txt" and will write to it (w).
+#fname = open("sowpods.txt",'r'); # This opens a file called "sowpods.txt"
 
-fname.write("This is the first line of the text file." + '\n')
+with open('sowpods.txt', 'r') as f:
+  line = f.readline().strip()
+  while line:
+    # do something with the 'line' variable
+    line = f.readline().strip()
 
-def file_len(fname):
-    with open(fname) as f:
-        for i, l in enumerate(f):
-            pass
-    return i + 1
-fname.close() # This closes the test.txt file.  Note that it is not indented, because you don't want to close the file every time a word is printed in the document.
+with open('sowpods.txt', 'r') as f:
+  lines = f.readlines()
+
+#print fname.read(10)
+#print lines
+
+file_length = len(lines)
+print file_length
+
+random_word_index = randint(0,file_length)
+print random_word_index
+
+# start here.  now that you have the index of the random word in the file,
+# you can call the word with the index.
+
+# def file_len(fname):
+#     with open(fname) as f:
+#         for i, l in enumerate(f):
+#             pass
+#     return i + 1
+
+
+#fname.close() # This closes the sowpods.txt file.  Note that it is not indented.
 
