@@ -12,35 +12,23 @@
 import random
 from random import randint
 
-#fname = open("sowpods.txt",'r'); # This opens a file called "sowpods.txt"
-
 with open('sowpods.txt', 'r') as f:
   line = f.readline().strip()
   while line:
-    # do something with the 'line' variable
     line = f.readline().strip()
 
 with open('sowpods.txt', 'r') as f:
   lines = f.readlines()
 
-#print fname.read(10)
-#print lines
-
 file_length = len(lines)
-print file_length
+#print file_length
 
 random_word_index = randint(0,file_length)
-print random_word_index
+#print random_word_index
 
-# start here.  now that you have the index of the random word in the file,
-# you can call the word with the index.
+#print lines[random_word_index]
 
-# def file_len(fname):
-#     with open(fname) as f:
-#         for i, l in enumerate(f):
-#             pass
-#     return i + 1
-
-
-#fname.close() # This closes the sowpods.txt file.  Note that it is not indented.
+print "There are %s lines in this document." % (file_length)
+print "We are randoming choosing to look at line number %s." % (random_word_index)
+print "The word on the line of interest is %s." % lines[random_word_index]
 
