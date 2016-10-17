@@ -22,11 +22,19 @@ print result
 # I need to figure out how to look at each value in the vector.
 
 # Use try/except to see if each value is an integer:
+# Adam gave me the code as follows:
 try:
-  square_roots = isinstance(square_roots, int)
-  not_integers = isinstance(square_roots, float)
+  square_root_integer = np.equal(np.mod(square_roots,1),0)
 except: 
   pass
   
-print square_roots
-print not_integers
+print square_root_integer
+# Here is the reason - if you take mod 1 of an integer, you get 0
+
+# We can then use the new square_roots array to print the values where it's 
+# true.
+
+if square_root_integer == True:
+  print square_roots
+
+  
