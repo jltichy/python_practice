@@ -49,6 +49,7 @@ while True:
     except ValueError:
         print("Oops!  That is not a valid number.  Try again.")
         
-
+# still not quite getting this:
+# use this webpage https://docs.python.org/3/tutorial/errors.html
 
   
