@@ -34,7 +34,11 @@ print square_root_integer
 # We can then use the new square_roots array to print the values where it's 
 # true.
 
-if square_root_integer == True:
-  print square_roots
+def function():
+    if square_root_integer == 'True':
+        print square_roots
+    elif square_root_integer == 'False':
+        print('not an integer')
+
 
   
