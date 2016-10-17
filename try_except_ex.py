@@ -16,13 +16,17 @@ square_roots = np.sqrt(np.abs(vector)) * np.sign(vector)
 print square_roots
 
 # Experiment with determining if a value is an integer:
-result = isinstance(square_roots, int )
+result = isinstance(square_roots, int)
 print result
 # It looks like this gives one result for the entire vector.
 # I need to figure out how to look at each value in the vector.
 
 # Use try/except to see if each value is an integer:
 try:
-  isinstance(square_roots, int)
+  square_roots = isinstance(square_roots, int)
+  not_integers = isinstance(square_roots, float)
 except: 
   pass
+  
+print square_roots
+print not_integers
