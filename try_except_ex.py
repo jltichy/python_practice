@@ -50,7 +50,7 @@ while True:
     try:
         x = int(input("Please enter a number:"))
         if debug:
-            print('Here is x' + str(x))
+            print('Here is your number: x = ' + str(x))
         # Here you are breaking out of the loop
         break
     # You were throwing an exception so the program crashes
