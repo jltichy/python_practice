@@ -7,6 +7,8 @@ import numpy as np
 import random
 from random import randint
 
+debug = True
+
 # Create a vector of length 10 of random numbers up to 10:
 vector = np.random.randint(10, size=10)
 print vector
@@ -34,12 +36,6 @@ print square_root_integer
 # We can then use the new square_roots array to print the values where it's 
 # true.
 
-def function():
-    if square_root_integer == 'True':
-        print square_roots
-    elif square_root_integer == 'False':
-        print('not an integer')
-
 
 # Let's try another example here.
 while True:
@@ -48,7 +44,10 @@ while True:
         break
     except ValueError:
         print("Oops!  That is not a valid number.  Try again.")
-        
+
+if debug:
+    print 'There is a problem.'
+       
 # still not quite getting this:
 # use this webpage https://docs.python.org/3/tutorial/errors.html
 
