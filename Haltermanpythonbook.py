@@ -57,3 +57,8 @@ print("Did you know that \"word\" is a word?")
 # Did you know that "word" is a word?
 # Did you know that 'word' is a word?
 # Did you know that "word" is a word?
+
+print('Please enter some text:')
+x = input()
+print('Text entered:', x)
+print('Type:', type(x))
