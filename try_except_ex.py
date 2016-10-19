@@ -58,8 +58,8 @@ while True:
     except:
         print("Oops!  That is not a valid number.  Try again.")
 
-if debug:
-    print 'There is a problem.'
+#if debug:
+#    print 'There is a problem.'
        
 # still not quite getting this:
 # use this webpage https://docs.python.org/3/tutorial/errors.html
