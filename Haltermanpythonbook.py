@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+import sys
+
 debug = True
 
 print("   *   ")
@@ -73,12 +75,29 @@ print("Did you know that \"word\" is a word?")
 
 # Let's try using try/except because I think we have a ValueError and I am 
 # throwing an exception:
-while True:
-    try:
-        x = (raw_input("Please enter some text:"))
-        if debug:
-            print('Input: ' + str(x))
-        break
-    except:
-        print('Input: ' + str(x))
+
+# I am going to comment this out so I don't have to enter something everytime
+# I run the program...
+
+# while True:
+#     try:
+#         x = (raw_input("Please enter some text:"))
+#         if debug:
+#             print('Input: ' + str(x))
+#         break
+#     except:
+#         print('Input: ' + str(x))
+
+
+# Let's figure out some specs for this IDE.
+#print sys.float_info 
+#print sys.int_info
+print sys.maxsize
+
+# Write a Python program that simply emits a beep sound when run.
+sys.stdout.write('\a')
+sys.stdout.flush()
+# This doesn't seem to be working.  It may be incompatible with Cloud9.
+
+# Start with Chapter 3.
 
