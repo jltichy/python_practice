@@ -58,6 +58,12 @@ print("Did you know that \"word\" is a word?")
 # Did you know that 'word' is a word?
 # Did you know that "word" is a word?
 
+# There is a problem with this section - I'm getting an error:
+#Traceback (most recent call last):
+#  File "/home/ubuntu/workspace/python_practice/Haltermanpythonbook.py", line 62, in <module>
+#    x = input()
+#  File "<string>", line 1, in <module>
+#NameError: name 'Hello' is not defined
 print('Please enter some text:')
 x = input()
 print('Text entered:', x)
