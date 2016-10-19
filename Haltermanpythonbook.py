@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+debug = True
+
 print("   *   ")
 print("  ***  ")
 print(" ***** ")
@@ -64,7 +66,19 @@ print("Did you know that \"word\" is a word?")
 #    x = input()
 #  File "<string>", line 1, in <module>
 #NameError: name 'Hello' is not defined
-print('Please enter some text:')
-x = input()
-print('Text entered:', x)
-print('Type:', type(x))
+
+#x = input('Please enter some text: ')
+#print('Text entered:', x)
+#print('Type:', type(x))
+
+# Let's try using try/except because I think we have a ValueError and I am 
+# throwing an exception:
+while True:
+    try:
+        x = int(input("Please enter some text:"))
+        if debug:
+            print('Number entered: ' + str(x))
+        break
+    except:
+        print('Text entered: ' + str(x))
+
