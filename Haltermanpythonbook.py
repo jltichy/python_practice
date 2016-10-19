@@ -75,10 +75,10 @@ print("Did you know that \"word\" is a word?")
 # throwing an exception:
 while True:
     try:
-        x = int(input("Please enter some text:"))
+        x = (raw_input("Please enter some text:"))
         if debug:
-            print('Number entered: ' + str(x))
+            print('Input: ' + str(x))
         break
     except:
-        print('Text entered: ' + str(x))
+        print('Input: ' + str(x))
 
