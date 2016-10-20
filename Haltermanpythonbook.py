@@ -124,5 +124,106 @@ sys.stdout.write('\a')
 sys.stdout.flush()
 # This doesn't seem to be working.  It may be incompatible with Cloud9.
 
-# Start with Chapter 3.
+# Chapter 3.
 
+print("x")
+print('x')
+print(x)
+print("x + 1")
+#print('x'+1) #This throws an error
+print(x + 1)
+
+# Here are the results of the above commands, minus the one with the error.
+# x
+# x
+# 100
+# x + 1
+# 101
+
+i1 = 2
+i2 = 5
+i3 = -3
+d1 = 2.0
+d2 = 5.0
+d3 = -0.5;
+
+print i1 + i2
+print i1 / i2
+print i1 // i2
+print i2 / i1
+print i2 // i1
+print i1 * i3
+print d1 + d2
+print d1 / d2
+print d2 / d1
+print d3 * d1
+print d1 + i2
+print i1 / d2
+print d2 / i1
+print i2 / d1
+print i1/i2*d1
+print d1*i1/i2
+print d1/d2*i1
+print i1*d1/d2
+print i2/i1*d1
+print d1*i2/i1
+print d2/d1*i1
+print i1*d2/d1
+
+# Here are the results of the above code.
+# 7
+# 0
+# 0
+# 2
+# 2
+# -6
+# 7.0
+# 0.4
+# 2.5
+# -1.0
+# 7.0
+# 0.4
+# 2.5
+# 2.5
+# 0.0
+# 0.8
+# 0.8
+# 0.8
+# 4.0
+# 5.0
+# 5.0
+# 5.0
+
+print(5/3)
+# This shows 1
+
+# # Get two numbers from the user
+# n1, n2 = eval(input()) # 1
+# # Compute sum of the two numbers
+# print(n1 + n2) # 2
+# # Compute average of the two numbers
+# print(n1+n2/2) # 3
+# # Assign some variables
+# d1 = d2 = 0 # 4
+# # Compute a quotient
+# print(n1/d1) # 5
+# # Compute a product
+# #n1*n2 = d1 # 6 # There is a problem with the syntax of this line.
+# # Print result
+# print(d1) # 7
+
+x1 = 2
+x2 = 2
+x1 += 1
+x2 -= 1
+print(x1) #3
+print(x2) #1
+
+r = 0
+PI = 3.14159
+# Formula for the area of a circle given its radius
+C = 2*PI*r
+# Get the radius from the user
+#r = eval(input("Please enter the circle's radius: ")
+# Print the circumference
+print("Circumference is", C)
