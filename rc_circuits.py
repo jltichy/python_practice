@@ -3,6 +3,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+#matplotlib.use('Agg')
+
 plt.style.use('ggplot')
 
 l = 0.0229      #Inductance (H)
