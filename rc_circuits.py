@@ -1,11 +1,10 @@
 #!/usr/bin/env python
 
 import numpy as np
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
-#matplotlib.use('Agg')
-
-plt.style.use('ggplot')
 
 l = 0.0229      #Inductance (H)
 r = 3.34        #Resistance (Ohm)
